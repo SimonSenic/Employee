@@ -31,7 +31,7 @@ public class Attendance {
                 if(num.charAt(i)=='0') System.out.println(count +": " +"N " +day);
                 else System.out.println(count +": " +"Y " +day);
                 count++;
-            }
+            } //15x15 defaultne nuly, 2 hrači piškvorky, (jednotky a dvojky)
         }
     }
 }
