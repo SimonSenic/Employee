@@ -29,7 +29,7 @@ public class Ttt {
                         if(count==5) return p;
                     }count=0; a=i; b=j;
                 }
-                if((p==1 || p==2) && j>=4 && i>=4)
+                if((p==1 || p==2) && j>=4 && i<=10)
                     for(int k=0; k<5; k++){ //rev-diagonal
                         if(count==0) count++;
                         else if(p==arr[++a][--b]) count++;
