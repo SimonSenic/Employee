@@ -1,5 +1,7 @@
 package sk.kosickaacademic.simon.person;
 
+import java.util.*;
+
 public class Person {
     private String fName, lName;
     private char gender;
@@ -26,5 +28,20 @@ public class Person {
 
     public int getAge() {
         return age;
+    }
+
+    public static int hashCode(String text){
+        String code = "";
+        List<Character> vowels = new ArrayList<>();
+        vowels.add('a');
+        vowels.add('e');
+        vowels.add('i');
+        vowels.add('o');
+        vowels.add('u');
+        vowels.add('y');
+        for(int i=0; i<text.length(); i++)
+            if(vowels.contains(text.toLowerCase().charAt(i))) code+=1;
+            else code+=0;
+        return Integer.parseInt(code,2);
     }
 }
