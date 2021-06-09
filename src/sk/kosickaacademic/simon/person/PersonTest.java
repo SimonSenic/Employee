@@ -13,5 +13,10 @@ class PersonTest {
         assertEquals(2, Person.hashCode("Pes"));
         assertEquals(10, Person.hashCode("Jozef"));
         assertEquals(10, Person.hashCode("Žolik"));
+        assertEquals(0, Person.hashCode(""));
+        assertEquals(0, Person.hashCode(null));
+        assertEquals(0, Person.hashCode("0125"));
+        assertEquals(16777215, Person.hashCode("AAAAAAAAAAAAAAAAAAAAAAAA"));
+        assertEquals(48, Person.hashCode("aa--|f"));
     }
 }

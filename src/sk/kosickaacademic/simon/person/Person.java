@@ -31,6 +31,7 @@ public class Person {
     }
 
     public static int hashCode(String text){
+        if(text==null || text.equals("")) return 0;
         String code = "";
         List<Character> vowels = new ArrayList<>();
         vowels.add('a');
